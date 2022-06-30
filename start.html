@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="nav-left">
+        <img src="images/logo.svg" alt="logo" />
+        <ul class="nav-link">
+          <li id="nav-links">
+            <a>Feature</a>
+          </li>
+          <li><a>Company</a></li>
+          <li><a>Career</a></li>
+          <li><a>About</a></li>
+        </ul>
+      </div>
+
+      <div class="nav-right">
+        <button>Login</button>
+        <button id="btn-right">Register</button>
+      </div>
+
+      <img id="burger" src="images/menu_FILL0_wght400_GRAD0_opsz48.svg" />
+      <div id="mob" class="nav-mob">
+        <ul class="mob-links">
+          <li>Feature</li>
+          <li>Home</li>
+          <li>Company</li>
+          <li>About</li>
+        </ul>
+      </div>
+    </nav>
+
+    <main class="container main-section">
+      <div class="main__left">
+        <div class="inner box-1">
+          <h1>Make</h1>
+          <h1>remote work</h1>
+        </div>
+
+        <div class="inner box-2">
+          <p>
+            Get your team in sync, no matter your location. <br />Streamline
+            processes, create team rituals, and <br />watch productivity soar.
+          </p>
+        </div>
+
+        <div class="inner box-3">
+          <button>Learn-More</button>
+        </div>
+      </div>
+      <div class="main__right">
+        <img src="./images/image-hero-desktop.png" />
+      </div>
+    </main>
+
+    <script>
+      let check = true;
+      let items = document.querySelectorAll(".items")[0];
+      let allLinks = document.querySelector("#nav-links");
+      let burger = document.getElementById("burger");
+      let mob = document.getElementById("mob");
+      burger.addEventListener("click", () => {
+        if (check) {
+          mob.style.display = "block";
+          burger.src = "./images/close.svg";
+        } else {
+          mob.style.display = "none";
+          burger.src = "images/menu_FILL0_wght400_GRAD0_opsz48.svg";
+        }
+        check = !check;
+      });
+      mob.addEventListener("mouseover", () => {
+        mob.style.display = "block";
+      });
+    </script>
+  </body>
+</html>
